@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orley Pães</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/logo_mini.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+</head>
+<body class="bg-warning-subtle">
+    <nav class="navbar navbar-dark fixed-top" style="background-color: #5E762B;">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-semibold" href="#">Orley Pães Artesanais</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end bg-warning-subtle" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-medium" href="#paes_salgados">Pães Salgados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-medium" href="#paes_doces">Pães Doces</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-medium" href="#acompanhamentos">Acompanhamentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-medium" style="color: white; font-weight: 600;" href="https://api.whatsapp.com/send?phone=554731700918&text=Dei%20uma%20olhada%20no%20card%C3%A1pio%20e%20quero%20fazer%20o%20meu%20pedido!" target="_blank">Fazer pedido no WhatsApp<span> <i class="fa fa-whatsapp fa-lg"></i> </span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="menu">
+        <div class="container" style="margin-top: 72px;" id="paes_salgados">
+            <h2 class="fs-4 m-0">Pães Salgados</h2>
+            <hr>
+            <div class="row animate__animated animate__fadeInRight">
+                <div class="col-sm-12 col-lg-6">
+                    <div class="card mb-3 border-0" style="height: 200px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/australiano.jpg" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="mb-0" style="font-size: 18px">Pão Australiano</h5>
+                                        <p class="m-0 fw-light" style="font-size: 14px;">450g</p>
+                                    </div>   
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 21,00</h6>                       
+                                    <p class="card-text m-0" style="font-size: 14px;">Com sabor marcante e cor atraente, nosso australiano é feito com ingredientes como mel, açúcar mascavo, cacau e manteiga.</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Pão Australiano"
+                                    data-preco="21.00"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 border-0" style="height: 200px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/brioche.jpeg" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mb-0" style="font-size: 18px;">Brioche</h5>
+                                        <p class="m-0 fw-light" style="font-size: 14px;">450g</p>
+                                    </div> 
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 21,00</h6>                         
+                                    <p class="card-text m-0" style="font-size: 14px">Com uma textura macia e amanteigada, ele derrete na boca. Perfeito para qualquer ocasião.</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Brioche"
+                                    data-preco="21.00"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <div class="card mb-3 border-0" style="height: 200px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/integral.jpeg" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mb-0" style="font-size: 18px;">Pão 100% Integral</h5>
+                                        <p class="m-0 fw-light" style="font-size: 14px;">500g</p>
+                                    </div>  
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 26,00</h6>                        
+                                    <p class="card-text m-0" style="font-size: 14px;">Produzido com farinha 100% integral, que é o seu diferencial, e rico em fibras. Ideal para quem busca uma vida saudável.</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Pão 100% Integral"
+                                    data-preco="26.00"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 border-0" style="height: 200px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/provolone.jpeg" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mb-0" style="font-size: 18px;">Pão de Provolone</h5>
+                                        <p class="fw-light" style="font-size: 14px;">350g</p>
+                                    </div>
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 21,50</h6>                          
+                                    <p class="card-text m-0" style="font-size: 14px;">Irresistível! Com pedaços de queijo provolone derretido, tem uma textura macia e um sabor marcante.</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Pão de Provolone"
+                                    data-preco="21.50"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <div class="card mb-3 border-0" style="height: 200px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/italiano.jpeg" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mb-0" style="font-size: 18px;">Pão Italiano</h5>
+                                        <p class="m-0 fw-light" style="font-size: 14px;">500g</p>
+                                    </div>  
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 26,00</h6>                        
+                                    <p class="card-text m-0" style="font-size: 14px;">Com uma crosta dourada e crocante e um miolo macio e leve. Ideal para suas refeições ou fazer deliciosos sanduíches.</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Pão Italiano"
+                                    data-preco="26.00"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 border-0" style="height: 200px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/azeitonas.jpg" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mb-0" style="font-size: 18px;">Pão de Uvapassas</h5>
+                                        <p class="m-0 fw-light" style="font-size: 14px;">400g</p>
+                                    </div>  
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 21,50</h6>                        
+                                    <p class="card-text m-0" style="font-size: 14px;">Para quem gosta daquela mistura de sabores, o nosso pão de uvapassas reúne o doce e o salgado na mesma mordida.</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Pão de Uvapassas"
+                                    data-preco="21.50"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <div class="card mb-3 border-0" style="height: 200px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/nozes.jpeg" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mb-0" style="font-size: 18px;">Pão de Nozes</h5>
+                                        <p class="m-0 fw-light" style="font-size: 14px;">400g</p>
+                                    </div>
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 21,50</h6>                          
+                                    <p class="card-text m-0" style="font-size: 14px;">Pão italiano de coloração arroxeada e sabor único. Com um toque de azeite, se tornará presença certa em sua mesa.</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Pão de Nozes"
+                                    data-preco="21.50"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 border-0" style="height: 200px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/multigraos.jpg" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mt-1 mb-0" style="font-size: 18px;">Pão Multigrãos</h5>
+                                        <p class="m-0 fw-light" style="font-size: 14px;">350g</p>
+                                    </div> 
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 21,50</h6>                         
+                                    <p class="card-text m-0" style="font-size: 14px;">Saudável e de fácil digestão este pão amarelo cúrcuma vai te impressionar.</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Pão Multigrãos"
+                                    data-preco="21.50"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <div class="card mb-3 border-0" style="height: 200px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/azeitonas.jpg" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mb-0" style="font-size: 18px;">Pão de Azeitonas</h5>
+                                        <p class="m-0 fw-light" style="font-size: 18px;">400g</p>
+                                    </div>  
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 21,50</h6>                        
+                                    <p class="card-text m-0" style="font-size: 14px;">Feito com azeitonas selecionadas, resultando em uma crosta crocante e um miolo macio e saboroso.</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Pão de Azeitona"
+                                    data-preco="21.50"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="container" style="margin-top: 18px;" id="paes_doces">
+            <h2 class="fs-4 m-0">Pães Doces</h2>
+            <hr>
+            <div class="row animate__animated animate__fadeInLeft">
+                <div class="col-sm-12 col-lg-6">
+                    <div class="card mb-3 border-0" style="height: 200px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/babka_choco.jpg" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mb-0" style="font-size: 18px;">Babka de Chocolate</h5>
+                                        <p class="m-0 fw-light" style="font-size: 14px;">250g</p>
+                                    </div> 
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 20,00</h6>                         
+                                    <p class="card-text m-0" style="font-size: 14px;">Massa macia trançada com gotas de chocolate. Deliciosa, irresistível e ideal para acompanhar um café ou como sobremesa!</p>
+                                   
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Babka de Chocolate"
+                                    data-preco="20.00"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 border-0" style="height: 200px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/babka_canela.jpg" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mb-0" style="font-size: 18px;">Babka de Canela</h5>
+                                        <p class="m-0 fw-light" style="font-size: 14px;">250g</p>
+                                    </div>
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 20,00</h6>                          
+                                    <p class="card-text m-0" style="font-size: 14px;">Massa trançada com recheio de canela aromática e açúcar mascavo. Perfeita para qualquer hora!</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Babka de Canela"
+                                    data-preco="20.00"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <div class="card mb-3 border-0" style="height: 200px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/babka_goiaba.jpeg  " class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mb-0" style="font-size: 18px;">Babka de Goiaba</h5>
+                                        <p class="m-0 fw-light" style="font-size: 14px;">250g</p>
+                                    </div> 
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 20,00</h6>                         
+                                    <p class="card-text m-0" style="font-size: 14px;">Massa trançada recheada com doce de goiaba. Um toque brasileiro delicioso em cada mordida!</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Babka de Goiaba"
+                                    data-preco="20.00"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 18px;" id="acompanhamentos">
+            <h2 class="fs-4 m-0">Acompanhamentos</h2>
+            <hr>
+            <div class="row animate__animated animate__fadeInRight">
+                <div class="col-sm-12 col-lg-6">
+                    <div class="card mb-3 border-0" style="height: 200px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/torrada.jpg" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mb-0" style="font-size: 18px;">Torrada Crocante</h5>
+                                        <p class="m-0 fw-light" style="font-size: 14px;">200g</p>
+                                    </div>  
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 15,00</h6>                        
+                                    <p class="card-text m-0" style="font-size: 14px;">Deliciosamente douradas e crocantes, perfeitas para patês, queijos ou saborear sozinhas. Experimente!</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Torrada Crocante"
+                                    data-preco="15.00"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 border-0" style="height: 200px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/pesto.jpeg" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mt-1 mb-0" style="font-size: 18px;">Pesto Genovez</h5>
+                                        <p class="m-0 fw-light" style="font-size: 14px;">200g</p>
+                                    </div>    
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 27,00</h6>                      
+                                    <p class="card-text m-0" style="font-size: 14px;">Manjericão fresco, pinhões, parmesão e azeite combinados em um molho saboroso. Ideal para pães, massas e saladas!</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Pesto Genovez"
+                                    data-preco="27.00"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <div class="card mb-3 border-0" style="height: 200px; margin-bottom: 88px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/caponata.jpg" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mb-0" style="font-size: 18px;">Caponata</h5>
+                                        <p class="m-0 fw-light" style="font-size: 14px;">200g</p>
+                                    </div>
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 27,00</h6>                    
+                                    <p class="card-text m-0" style="font-size: 14px;">Berinjela, tomate, pimentão, azeitonas e alcaparras em um delicioso molho agridoce.</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Caponata"
+                                    data-preco="27.00"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0" style="height: 200px; margin-bottom: 88px;">
+                        <div class="row no-gutters">
+                            <div class="col-5 pe-0" style="height: 200px;">
+                                <img src="assets/confit_certo.png" class="card-img">
+                            </div>
+                            <div class="col-7 ps-0">
+                                <div class="card-body d-flex justify-content-between flex-column" style="height: 200px; padding: 10px;">
+                                    <div class=" d-flex justify-content-between">
+                                        <h5 class="mb-0" style="font-size: 18px;">Tomate Confit</h5>
+                                        <p class="m-0 fw-light" style="font-size: 14px;">200g</p>
+                                    </div>    
+                                    <h6 class="mb-0" style="font-size: 16px;">R$ 27,00</h6>                      
+                                    <p class="card-text m-0" style="font-size: 14px;">Cozidos com azeite, alho e ervas, resultando em uma explosão de sabor. Perfeito para acompanhar nossos pães artesanais!</p>
+                                    <button 
+                                    class="btn border-0 p-1 d-flex justify-content-center add-to-cart-btn" 
+                                    style="background-color: #5E762B; border-radius: 8px;"
+                                    data-name="Tomate Confit"
+                                    data-preco="27.00"
+                                    onclick="toastAddCart()"
+                                    >
+                                        <p style="font-size: 14px;" class="fw-medium m-0 text-white text-center">Adicionar ao Carrinho</p>
+                                        <i class="fa fa-cart-plus ms-1 fa-lg text-white" aria-hidden="true" style="margin-top: 2px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="tab">
+        <button type="button" class="btn btn-primary bg-transparent border-0" id="" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="font-weight: 600;">
+            ( <span id="card-counter">0</span> )
+            Vizualizar Carrinho
+            <span><i class="fa fa-shopping-cart text-white fa-lg" aria-hidden="true"></i></span>
+        </button>
+    </div>
+
+    <div class="modal fade" id="carrinhoModal" tabindex="-1" aria-labelledby="carrinhoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="carrinhoModalLabel">Meu Carrinho - <span id="cart-counter"> 0 </span> item(ns)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between mb-2 flex-column" id="cart-itens"> 
+
+                    </div>
+                    <p class="fw-medium mb-2">Subtotal: <span id="subtotal">0,00</span></p>
+
+                    <hr class="m-0">
+
+                    <p class="fw-medium fs-6 my-2">Dados da Entrega</p>
+
+                    <div class="row g-3 m-0 ">
+                        <div class="col-sm-6 input-group-sm m-0">
+                            <label for="nome" class="form-label mb-1">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+                        </div>     
+    
+                        <div class="col-sm-6 input-group-sm m-0">
+                            <label for="cep" class="form-label mb-1">Digite seu CEP</label>
+                            <input type="text" class="form-control" placeholder="CEP" id="cep" nome="cep" required>
+                        </div>
+                    </div>
+
+                    <div class="row g-1 px-3">
+                        <div class="col-sm-6 input-group-sm">
+                            <label for="rua" class="form-label mb-1">Rua</label>
+                            <input type="text" class="form-control" id="rua" placeholder="Rua" required>
+                        </div>     
+    
+                        <div class="col-sm-2 input-group-sm">
+                            <label for="numero" class="form-label mb-1">Número</label>
+                            <input type="text" class="form-control" placeholder="Número" id="numero" nome="numero" required>
+                        </div>
+
+                        <div class="col-sm-4 input-group-sm">
+                            <label for="bairro">Bairro</label>
+                            <select class="form-select form-select-sm mb-3 mt-1" id="bairro" name="bairro" onchange="updateDeliveryPrice()" required>
+                                <option value="" disabled selected>Escolha o bairro</option>
+                                <!-- Bairros serão adicionados dinamicamente -->
+                            </select>
+                        </div>
+                    </div>                 
+                    
+                    <p class="mb-2">Preço da Entrega: <span id="preco-entrega">R$ 0,00</span></p>
+
+                    <hr class="m-0">
+                    <!--
+                    <p class="fw-medium mt-2 mb-0">Total com Entrega: <span id="total">0,00</span></p>
+                    -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary border-0 w-100" style="background-color: #5E762B" id="checkout-btn">
+                        <i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i>
+                        Finalizar Pedido no WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+        
+    <script src="entrega.js"></script>
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+    <script src="notyf.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    
+</body>
+</html>
+
